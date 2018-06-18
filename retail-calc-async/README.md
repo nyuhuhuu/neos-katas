@@ -1,5 +1,12 @@
 # Async retail calculator
 
+## Good for practicing
+
+- TDD
+- Coding in JavaScript
+- Callbacks and Promises
+- Writing unit tests for async events
+
 ## Challenge
 
 1. Implement the retail calculator test first way.
