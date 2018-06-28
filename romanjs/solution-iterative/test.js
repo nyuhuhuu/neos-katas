@@ -1,5 +1,5 @@
 const assert = require('assert');
-const roman = require('../app');
+const roman = require('./app');
 
 describe('Converts decimals to roman number', function() {
 
