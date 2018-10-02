@@ -10,7 +10,7 @@ const crack = (msg, limit = null) => {
     if (limit && count >= limit) throw new Error("No solutions found");
     return decoder(rotateString(msg), limit, count + 1);
   };
-  return decoder(msg, limit, 0);
+  return decoder(msg, limit);
 };
 
 const solution = crack(secret, limit);
