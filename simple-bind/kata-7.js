@@ -4,10 +4,10 @@ const add = (a, b, c, d) => {
 
 // Well done!
 //
-// Using arrow functions `this` comes from the surrounding lexical context,
+// When using arrow functions `this` comes from the surrounding lexical context,
 // while normally its value depends on the executional context. That said, an
-// arrow function for the outer function in this example would not work because
-// it's `this` value cannot be rebound to the Function object it's called upon.
+// arrow function for the outer function would not work in this example because
+// its `this` value cannot be rebound to the Function object it's called upon.
 Function.prototype.myBind = function(...first) {
   return (...rest) => this(...first, ...rest);
 };
