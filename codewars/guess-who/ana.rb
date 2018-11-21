@@ -36,20 +36,14 @@ class GuessWho
       ["Correct! in #{@counter} turns"]
     elsif name?(guess)
       [@character]
-    elsif hit?(guess)
-      names_by(guess)
     else
-      names_opposite_by(guess)
+      names_by(guess)
     end
   end
 
   def names_by(characteristic)
-    @characteristics.select! { |person| person[1].include?(characteristic) }
-    names
-  end
-
-  def names_opposite_by(characteristic)
-    @characteristics.reject! { |person| person[1].include?(characteristic) }
+    action = hit?(characteristic) ? :select! : :reject!
+    @characteristics.send(action) { |person| person[1].include?(characteristic) }
     names
   end
 
