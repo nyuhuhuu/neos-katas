@@ -25,7 +25,7 @@ function GuessWho (person){
                    ["Etienne",["Male","Brown eyes","Blonde hair","Small nose","Small mouth","Glasses"]],
                    ["Henri",["Male","Brown eyes","White hair","Small nose","Big mouth","Hat"]],
                    ["Damien",["Male","Brown eyes","Blonde hair","Small nose","Big mouth","Hat"]]]
-  this.personChars = this.suspects.filter(suspect => suspect[0] === this.person)[0][1]
+  this.personChars = this.suspects.find(suspect => suspect[0] === this.person)[1]
 
 }
 
